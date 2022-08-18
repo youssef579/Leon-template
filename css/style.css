@@ -434,6 +434,7 @@ hr {
     }
 
     .about .text {
+        text-align: center;
         flex-basis: 100%;
     }
 }
