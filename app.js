@@ -3,7 +3,7 @@ let navList = document.querySelector('header ul');
 let span = document.querySelector(".list div:nth-of-type(even)");
 
 navList.style.display = 'none';
-navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 7 + 'px';
+navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 3 + 'px';
 
 list.addEventListener('click', function () {
     if (navList.style.display == 'none') {
@@ -16,5 +16,5 @@ list.addEventListener('click', function () {
 })
 
 window.addEventListener("resize", function () {
-    navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 7 + 'px';
+    navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 100 + 'px';
 });
