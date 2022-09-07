@@ -3,7 +3,12 @@ let navList = document.querySelector('header ul');
 let span = document.querySelector(".list div:nth-of-type(even)");
 
 navList.style.display = 'none';
-navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 3 + 'px';
+
+function checkResize () {
+    navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 3 + 'px';
+}
+
+checkResize()
 
 list.addEventListener('click', function () {
     if (navList.style.display == 'none') {
@@ -15,6 +20,4 @@ list.addEventListener('click', function () {
     }
 })
 
-window.addEventListener("resize", function () {
-    navList.style.right = document.body.getBoundingClientRect().right - list.getBoundingClientRect().right + 100 + 'px';
-});
+window.addEventListener("resize", checkResize);
