@@ -123,7 +123,10 @@ header img {
 }
 
 header .nav-list {
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+    translate: 0 20px;
     position: fixed;
     z-index: 9999;
     right: calc(clamp(20px, 5vw, 300px) + 5px);
